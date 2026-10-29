@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "outputDirectory": "build/web",
+  "routes": [
+    {
+      "src": "/mobile",
+      "dest": "/mobile_app.html"
+    },
+    {
+      "src": "/mobile_app.html",
+      "dest": "/mobile_app.html"
+    },
+    {
+      "src": "/download",
+      "dest": "/download.html"
+    },
+    {
+      "src": "/download-apk",
+      "dest": "/app-release.apk"
+    },
+    {
+      "src": "/app-release.apk",
+      "dest": "/app-release.apk"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
