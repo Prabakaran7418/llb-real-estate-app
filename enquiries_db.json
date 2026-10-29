@@ -1,0 +1,192 @@
+[
+  {
+    "enquiryId": "enq-1793169644364",
+    "customer": {
+      "name": "Prabakaran Sethu",
+      "email": "prabakaransethu7@gmail.com",
+      "phone": "9840012345",
+      "message": "Requesting a site visit schedule for the Anna Nagar plot."
+    },
+    "property": {
+      "id": "PL-ANN-04",
+      "title": "Plot #04 - Anna Nagar West Extension",
+      "locality": "Anna Nagar",
+      "price": "? 2.10 Crores",
+      "dimensions": "40 � 60 ft (2,400 sq.ft)"
+    },
+    "adminNotified": true,
+    "adminMessageId": "<f665509b-928b-69e4-a5ba-c30149213532@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T06:40:44.364Z"
+  },
+  {
+    "enquiryId": "enq-1793168434667",
+    "customer": {
+      "name": "Karthik Raja",
+      "needCab": true,
+      "phone": "+91 98402 34567",
+      "pickupAddress": "Velachery Main Road, Chennai",
+      "email": "prabakaransethu7@gmail.com",
+      "message": "Interested in Plot #11 Porur Mount View Residency. Please share CMDA sanctioned drawings and coordinate cab pickup."
+    },
+    "property": {
+      "locality": "Porur, Chennai",
+      "id": "PL-POR-11",
+      "facing": "North-East Corner Facing",
+      "waterTable": "Sweet Ground Water at 25 ft",
+      "latitude": 13.0382,
+      "title": "Plot #11 - Mount View Residency, Porur",
+      "approval": "CMDA Approved (No: 112/2024)",
+      "dimensions": "30 ft � 40 ft (1,200 sq.ft)",
+      "price": "? 57.6 Lakhs",
+      "plotNumber": "Plot #11",
+      "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&destination=13.038200,80.156400&travelmode=driving",
+      "projectName": "Mount View Residency",
+      "longitude": 80.1564,
+      "areaSqFt": 1200,
+      "address": "Plot #11, Trunk Road Link, Porur, Chennai - 600116"
+    },
+    "adminNotified": true,
+    "adminMessageId": "<4e7c45cc-7702-de48-85d9-55511ea6200d@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T11:50:32.5580304+05:30"
+  },
+  {
+    "enquiryId": "enq-1793163707321",
+    "customer": {
+      "name": "nasiha ashif",
+      "email": "nasiha2305@gmail.com",
+      "phone": "+91 98400 12345",
+      "message": "I am interested in purchasing Plot #14 (Plot #14 - Munusamy Grand Layout, KK Nagar) in KK Nagar. Please provide legal title verification and coordinate site visit.",
+      "needCab": true,
+      "pickupAddress": "Residence"
+    },
+    "property": {
+      "id": "PL-KKN-14",
+      "plotNumber": "Plot #14",
+      "projectName": "Munusamy Grand Layout",
+      "title": "Plot #14 - Munusamy Grand Layout, KK Nagar",
+      "price": "₹ 78.0 Lakhs",
+      "dimensions": "30 ft × 40 ft (1,200 sq.ft)",
+      "areaSqFt": 1200,
+      "locality": "KK Nagar",
+      "address": "Plot #14, Munusamy Salai, Sector 10, KK Nagar, Chennai - 600078",
+      "latitude": 13.041042,
+      "longitude": 80.199415,
+      "facing": "North Facing (100% Vasthu)",
+      "approval": "CMDA Approved & RERA Registered",
+      "waterTable": "Sweet Potable Drinking Water at 22 ft",
+      "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&destination=13.041042,80.199415&travelmode=driving",
+      "images": [
+        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    "adminNotified": true,
+    "adminMessageId": "<4b767bc4-c122-97ce-3efd-5eb5200ac07c@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T05:01:47.303Z"
+  },
+  {
+    "enquiryId": "enq-1793163433764",
+    "customer": {
+      "name": "nasiha banu",
+      "email": "nasiha2305@gmail.com",
+      "phone": "+91 98400 12345",
+      "message": "I am interested in purchasing Plot #05 (Plot #05 - Phoenix Park Gardens, Velachery) in Velachery. Please provide legal title verification and coordinate site visit.",
+      "needCab": true,
+      "pickupAddress": "Residence"
+    },
+    "property": {
+      "id": "PL-VEL-05",
+      "plotNumber": "Plot #05",
+      "projectName": "Phoenix Park Gardens",
+      "title": "Plot #05 - Phoenix Park Gardens, Velachery",
+      "price": "₹ 1.22 Crores",
+      "dimensions": "35 ft × 50 ft (1,750 sq.ft)",
+      "areaSqFt": 1750,
+      "locality": "Velachery",
+      "address": "Plot #05, 100 Feet Bypass Road, Near Phoenix Marketcity, Velachery, Chennai - 600042",
+      "latitude": 12.97845,
+      "longitude": 80.2212,
+      "facing": "East Facing",
+      "approval": "CMDA Approved & Corporation Limits",
+      "waterTable": "Sweet Ground Water at 22 ft",
+      "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&destination=12.97845,80.2212&travelmode=driving",
+      "images": [
+        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    "adminNotified": true,
+    "adminMessageId": "<41436aaa-ac30-b041-ac73-b5acb478a6d7@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T04:57:13.751Z"
+  },
+  {
+    "enquiryId": "enq-1793163367179",
+    "customer": {
+      "name": "nasiha aasif",
+      "email": "nasiha2305@gmail.com",
+      "phone": "+91 98400 12345",
+      "message": "I am interested in purchasing Plot #22 (Plot #22 - Greenfield Sanctuary, Tambaram West) in Tambaram. Please provide legal title verification and coordinate site visit.",
+      "needCab": true,
+      "pickupAddress": "Residence"
+    },
+    "property": {
+      "id": "PL-TAM-22",
+      "plotNumber": "Plot #22",
+      "projectName": "Greenfield Sanctuary Layout",
+      "title": "Plot #22 - Greenfield Sanctuary, Tambaram West",
+      "price": "₹ 48.0 Lakhs",
+      "dimensions": "30 ft × 50 ft (1,500 sq.ft)",
+      "areaSqFt": 1500,
+      "locality": "Tambaram",
+      "address": "Plot #22, Mudichur Road, Near Tambaram Sanatorium, Chennai - 600045",
+      "latitude": 12.92488,
+      "longitude": 80.11995,
+      "facing": "North Facing (Kubera Vasthu)",
+      "approval": "CMDA & RERA Approved Township",
+      "waterTable": "Mineral Sweet Water at 18 ft",
+      "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&destination=12.92488,80.11995&travelmode=driving",
+      "images": [
+        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    "adminNotified": true,
+    "adminMessageId": "<3e68788c-4420-fb47-8feb-1a42fc583ff0@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T04:56:07.162Z"
+  },
+  {
+    "enquiryId": "enq-1793162733978",
+    "customer": {
+      "name": "Karthikeyan Ramesh",
+      "needCab": true,
+      "phone": "+91 98401 23456",
+      "pickupAddress": "Anna Nagar West, Chennai",
+      "email": "prabakaransethu7@gmail.com",
+      "message": "Interested in purchasing Plot #14 KK Nagar. Please send CMDA legal approval documents and coordinate site visit."
+    },
+    "property": {
+      "locality": "KK Nagar, Chennai",
+      "id": "PL-KKN-14",
+      "facing": "North Facing (100% Vasthu)",
+      "waterTable": "Sweet Potable Drinking Water at 22 ft",
+      "latitude": 13.041042,
+      "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&destination=13.041042,80.199415&travelmode=driving",
+      "title": "Plot #14 - Munusamy Grand Layout, KK Nagar",
+      "approval": "CMDA Approved (No: 114/2024)",
+      "dimensions": "30 ft � 40 ft (1,200 sq.ft)",
+      "price": "? 78.0 Lakhs",
+      "plotNumber": "Plot #14",
+      "longitude": 80.199415,
+      "projectName": "Munusamy Grand Layout",
+      "priceFormatted": "? 78.0 Lakhs",
+      "areaSqFt": 1200,
+      "address": "Plot #14, Munusamy Salai, Sector 10, KK Nagar, Chennai - 600078"
+    },
+    "adminNotified": true,
+    "adminMessageId": "<d28dcf4a-4cac-6f48-4457-6845b1c9b602@gmail.com>",
+    "customerConfirmed": true,
+    "timestamp": "2026-10-28T04:45:33.978Z"
+  }
+]

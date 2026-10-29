@@ -1,0 +1,513 @@
+import '../models/property_model.dart';
+
+class SeedData {
+  static List<PropertyModel> get chennaiProperties => [
+        // 1. KK Nagar - Munusamy Grand Layout Plot #14 (Available)
+        PropertyModel(
+          id: 'PL-KKN-14',
+          plotNumber: 'Plot #14',
+          projectName: 'Munusamy Grand Layout',
+          title: 'Plot #14 - Munusamy Grand Layout, KK Nagar',
+          description:
+              'Premium CMDA & RERA approved demarcated residential plot in the heart of KK Nagar Sector 10. Direct 30-ft road frontage, sweet potable drinking water at 22 ft, streetlights, underground sewage, and pre-cast boundary corner stones installed.',
+          price: 7800000, // ₹78 Lakhs
+          pricePerSqFt: 6500,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1200,
+          dimensions: '30 ft × 40 ft (1,200 sq.ft)',
+          facing: 'North Facing (100% Vasthu)',
+          approval: 'CMDA Approved (No: 114/2024) & RERA Registered',
+          waterTable: 'Sweet Potable Drinking Water at 22 ft',
+          address: 'Plot #14, Munusamy Salai, Sector 10, KK Nagar, Chennai - 600078',
+          locality: 'KK Nagar, Chennai',
+          latitude: 13.041042,
+          longitude: 80.199415,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved (No: 114/2024)',
+            '30 Feet Blacktop Tar Road',
+            'Pre-cast Boundary Corner Stones',
+            '3-Phase Underground EB Line',
+            'Sweet Potable Water at 22 ft',
+            'Pre-Approved 90% Loan (SBI, HDFC)',
+          ],
+          nearbyLandmarks: [
+            'Sivan Park (350 m)',
+            'Ashok Nagar Metro (900 m)',
+            'PSBB School (1.2 km)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 1)),
+        ),
+
+        // 2. KK Nagar - Plot #15 Corner Ground (Reserved)
+        PropertyModel(
+          id: 'PL-KKN-15',
+          plotNumber: 'Plot #15',
+          projectName: 'Munusamy Grand Layout',
+          title: 'Plot #15 (Corner Ground) - Munusamy Grand Layout, KK Nagar',
+          description:
+              'High-demand full 1 Ground corner plot in KK Nagar. Double-sided 40ft & 30ft road access suitable for luxury independent stilt+3 floors bungalow. Currently reserved with booking token.',
+          price: 15600000, // ₹1.56 Cr
+          pricePerSqFt: 6500,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 2400,
+          dimensions: '40 ft × 60 ft (2,400 sq.ft / 1 Ground)',
+          facing: 'North-East Corner Facing',
+          approval: 'CMDA Approved & Clear Legal Title',
+          waterTable: 'Sweet Potable Drinking Water at 20 ft',
+          address: 'Plot #15, 10th Sector 34th Street, KK Nagar, Chennai - 600078',
+          locality: 'KK Nagar, Chennai',
+          latitude: 13.041420,
+          longitude: 80.199780,
+          availability: 'reserved',
+          images: [
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved',
+            'Dual Road Frontage (40ft & 30ft)',
+            'North-East Corner Vasthu',
+            'Ready for Immediate Construction',
+          ],
+          nearbyLandmarks: [
+            'Munusamy Salai Signal (200 m)',
+            'Kasi Theatre (1.4 km)',
+          ],
+          isFeatured: false,
+          isAvailable: false,
+          createdAt: DateTime.now().subtract(const Duration(days: 3)),
+        ),
+
+        // 3. MGR Nagar - Kamarajar Salai Enclave Plot #08 (Available)
+        PropertyModel(
+          id: 'PL-MGR-08',
+          plotNumber: 'Plot #08',
+          projectName: 'Kamarajar Salai Enclave',
+          title: 'Plot #08 - Kamarajar Salai Enclave, MGR Nagar',
+          description:
+              'Compact independent residential plot in mature, central MGR Nagar. Walking distance to market, bus stops, and schools. Ready for immediate G+2 house construction with clear title deed.',
+          price: 6200000, // ₹62 Lakhs
+          pricePerSqFt: 6200,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1000,
+          dimensions: '25 ft × 40 ft (1,000 sq.ft)',
+          facing: 'East Facing (Surya Vasthu)',
+          approval: 'CMDA Approved & Corporation Limits',
+          waterTable: 'Sweet Ground Water at 24 ft',
+          address: 'Plot #08, Kamarajar Salai, Near Market Signal, MGR Nagar, Chennai - 600078',
+          locality: 'MGR Nagar, Chennai',
+          latitude: 13.033620,
+          longitude: 80.195040,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved',
+            '24 Feet Wide Municipal Road',
+            'Corporation Water & Drainage Line',
+            'EB Line Connected',
+          ],
+          nearbyLandmarks: [
+            'Kasi Theatre Junction (600 m)',
+            'Jafferkhanpet Bus Stop (400 m)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 4)),
+        ),
+
+        // 4. Tambaram West - Greenfield Sanctuary Plot #22 (Available)
+        PropertyModel(
+          id: 'PL-TAM-22',
+          plotNumber: 'Plot #22',
+          projectName: 'Greenfield Sanctuary Layout',
+          title: 'Plot #22 - Greenfield Sanctuary Layout, Tambaram West',
+          description:
+              'Peaceful gated plotted community in Tambaram West. Features concrete storm drainage, landscaped children park, sweet drinking water at shallow depth (18 ft), and 24/7 security booth.',
+          price: 4800000, // ₹48 Lakhs
+          pricePerSqFt: 3200,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1500,
+          dimensions: '30 ft × 50 ft (1,500 sq.ft)',
+          facing: 'North Facing (Kubera Vasthu)',
+          approval: 'CMDA & RERA Approved Gated Township',
+          waterTable: 'Mineral Sweet Drinking Water at 18 ft',
+          address: 'Plot #22, Mudichur Road, Near Tambaram Sanatorium, Chennai - 600045',
+          locality: 'Tambaram, Chennai',
+          latitude: 12.924880,
+          longitude: 80.119950,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'Gated Plotted Community',
+            '30 Feet Blacktop Tar Road',
+            'Children Play Park & Avenue Trees',
+            'Pre-Approved 90% Loan (SBI & HDFC)',
+          ],
+          nearbyLandmarks: [
+            'Tambaram Railway Station (1.8 km)',
+            'Madras Christian College (2.2 km)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 6)),
+        ),
+
+        // 5. Tambaram West - Greenfield Sanctuary Plot #23 (Sold Out)
+        PropertyModel(
+          id: 'PL-TAM-23',
+          plotNumber: 'Plot #23',
+          projectName: 'Greenfield Sanctuary Layout',
+          title: 'Plot #23 - Greenfield Sanctuary Layout, Tambaram West',
+          description:
+              'Demarcated family residential plot in Tambaram West. Successfully registered and handed over to customer with 100% clear parent title.',
+          price: 3072000, // ₹30.7 Lakhs
+          pricePerSqFt: 3200,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 960,
+          dimensions: '24 ft × 40 ft (960 sq.ft)',
+          facing: 'South Facing',
+          approval: 'CMDA & RERA Approved',
+          waterTable: 'Ground Water at 18 ft',
+          address: 'Plot #23, Mudichur Link Road, Tambaram West, Chennai - 600045',
+          locality: 'Tambaram, Chennai',
+          latitude: 12.925200,
+          longitude: 80.120400,
+          availability: 'sold',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'Registered Document',
+            '30 Feet Tar Road',
+            'Boundary Corner Stones',
+          ],
+          nearbyLandmarks: [
+            'Tambaram Bus Terminus (2.0 km)',
+          ],
+          isFeatured: false,
+          isAvailable: false,
+          createdAt: DateTime.now().subtract(const Duration(days: 10)),
+        ),
+
+        // 6. Velachery - Phoenix Park Gardens Plot #05 (Available)
+        PropertyModel(
+          id: 'PL-VEL-05',
+          plotNumber: 'Plot #05',
+          projectName: 'Phoenix Park Gardens',
+          title: 'Plot #05 - Phoenix Park Gardens, Velachery',
+          description:
+              'Rare open CMDA approved plot in Velachery bypass zone. Surrounded by high-end villas, walking distance to Phoenix Marketcity and schools. High capital appreciation and rental yield zone.',
+          price: 12250000, // ₹1.22 Cr
+          pricePerSqFt: 7000,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1750,
+          dimensions: '35 ft × 50 ft (1,750 sq.ft)',
+          facing: 'East Facing',
+          approval: 'CMDA Approved & Corporation Limits',
+          waterTable: 'Sweet Ground Water at 22 ft',
+          address: 'Plot #05, 100 Feet Bypass Road, Near Phoenix Marketcity, Velachery, Chennai - 600042',
+          locality: 'Velachery, Chennai',
+          latitude: 12.978450,
+          longitude: 80.221200,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved',
+            '30 Feet Wide Blacktop Road',
+            'Avenue Streetlights',
+            'Approved by All Banks (85%)',
+          ],
+          nearbyLandmarks: [
+            'Phoenix Marketcity (450 m)',
+            'Velachery MRTS Station (1.1 km)',
+            'Grand Mall (800 m)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 7)),
+        ),
+
+        // 7. Porur - Mount View Residency Plot #11 (Available)
+        PropertyModel(
+          id: 'PL-POR-11',
+          plotNumber: 'Plot #11',
+          projectName: 'Mount View Residency',
+          title: 'Plot #11 - Mount View Residency, Porur',
+          description:
+              'Strategic investment plot behind Sri Ramachandra Medical College and DLF IT corridor. High rental yield and immediate appreciation driven by the upcoming Metro Phase 2 corridor.',
+          price: 5760000, // ₹57.6 Lakhs
+          pricePerSqFt: 4800,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1200,
+          dimensions: '30 ft × 40 ft (1,200 sq.ft)',
+          facing: 'North-East Corner Facing',
+          approval: 'CMDA Approved & Ready for Immediate Registry',
+          waterTable: 'Sweet Ground Water at 25 ft',
+          address: 'Plot #11, Trunk Road Link, Near Ramachandra Hospital, Porur, Chennai - 600116',
+          locality: 'Porur, Chennai',
+          latitude: 13.038200,
+          longitude: 80.156400,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved',
+            '30 Feet Concrete Road',
+            'Underground Drainage Line',
+            '90% Loan Available (SBI / HDFC)',
+          ],
+          nearbyLandmarks: [
+            'Sri Ramachandra Hospital (650 m)',
+            'DLF Cybercity (2.0 km)',
+            'Porur Toll Gate (1.2 km)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 8)),
+        ),
+
+        // 8. Porur - Mount View Residency Plot #12 (Reserved)
+        PropertyModel(
+          id: 'PL-POR-12',
+          plotNumber: 'Plot #12',
+          projectName: 'Mount View Residency',
+          title: 'Plot #12 - Mount View Residency, Porur',
+          description:
+              '2,000 sq.ft large residential plot currently reserved with booking token. Verified CMDA sanctioned layout with clear parent deeds.',
+          price: 9600000, // ₹96 Lakhs
+          pricePerSqFt: 4800,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 2000,
+          dimensions: '40 ft × 50 ft (2,000 sq.ft)',
+          facing: 'West Facing',
+          approval: 'CMDA Approved',
+          waterTable: 'Ground Water at 25 ft',
+          address: 'Plot #12, Kundrathur Main Road Link, Porur, Chennai - 600116',
+          locality: 'Porur, Chennai',
+          latitude: 13.038650,
+          longitude: 80.156900,
+          availability: 'reserved',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved',
+            '30 Feet Tar Road',
+            'Boundary Corner Stones',
+          ],
+          nearbyLandmarks: [
+            'DLF IT Park (1.8 km)',
+          ],
+          isFeatured: false,
+          isAvailable: false,
+          createdAt: DateTime.now().subtract(const Duration(days: 12)),
+        ),
+
+        // 9. OMR Sholinganallur - ELCOT Silicon Garden Plot #31 (Available)
+        PropertyModel(
+          id: 'PL-OMR-31',
+          plotNumber: 'Plot #31',
+          projectName: 'ELCOT Silicon Garden',
+          title: 'Plot #31 (1 Ground) - ELCOT Silicon Garden, Sholinganallur',
+          description:
+              'CMDA approved prime 1 Ground villa plot inside a secured gated township directly connecting to OMR IT Corridor and ELCOT SEZ. 40ft wide blacktop avenues with underground cabling.',
+          price: 18500000, // ₹1.85 Cr
+          pricePerSqFt: 7700,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 2400,
+          dimensions: '40 ft × 60 ft (2,400 sq.ft / 1 Ground)',
+          facing: 'East Facing (Sun Vasthu)',
+          approval: 'CMDA & RERA Approved (TN/RERA/0119/2023)',
+          waterTable: 'Sweet Potable Water at 28 ft',
+          address: 'Plot #31, ELCOT Avenue, Sholinganallur Junction, OMR, Chennai - 600119',
+          locality: 'OMR, Chennai',
+          latitude: 12.901040,
+          longitude: 80.227900,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'Gated Community 24/7 Security',
+            '40 Feet Wide Blacktop Roads',
+            'Underground Electrical Cabling',
+            'Pre-Approved Bank Loan up to 90%',
+          ],
+          nearbyLandmarks: [
+            'ELCOT SEZ IT Park (1.0 km)',
+            'Apollo Speciality Hospital (2.3 km)',
+            'Proposed Metro Phase 2 Station (600 m)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 5)),
+        ),
+
+        // 10. ECR Injambakkam - Golden Beach Haven Plot #09 (Available)
+        PropertyModel(
+          id: 'PL-ECR-09',
+          plotNumber: 'Plot #09',
+          projectName: 'Golden Beach Haven',
+          title: 'Plot #09 - Golden Beach Haven, ECR Injambakkam',
+          description:
+              'Exclusive coastal residential plot situated only 350 meters from the Bay of Bengal beach. Shallow sweet drinking water table, 100% clear legal title, and high-net-worth neighborhood.',
+          price: 24000000, // ₹2.40 Cr
+          pricePerSqFt: 10000,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 2400,
+          dimensions: '40 ft × 60 ft (2,400 sq.ft)',
+          facing: 'North Facing (Wealth Vasthu)',
+          approval: 'CMDA Approved & CRZ Cleared',
+          waterTable: 'Abundant Sweet Potable Water at 14 ft',
+          address: 'Plot #09, Golden Beach Avenue, Injambakkam, ECR, Chennai - 600115',
+          locality: 'ECR, Chennai',
+          latitude: 12.923800,
+          longitude: 80.252000,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            '350m to Bay of Bengal Beach',
+            'Fenced Boundary with Iron Gate',
+            'Sweet Potable Ground Water at 14 ft',
+            'Ready for Instant Villa Construction',
+          ],
+          nearbyLandmarks: [
+            'Prarthana Drive-In (1.2 km)',
+            'Cholamandal Artists Village (2.0 km)',
+            'Akkarai Beach Park (2.5 km)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 9)),
+        ),
+
+        // 11. Anna Nagar - Elite Layout Plot #04 (Available)
+        PropertyModel(
+          id: 'PL-ANN-04',
+          plotNumber: 'Plot #04',
+          projectName: 'Anna Nagar Elite Layout',
+          title: 'Plot #04 - Anna Nagar West Extension',
+          description:
+              'Ultra-rare CMDA approved residential corner plot in prime Anna Nagar West Extension. Surrounded by elite residences, prestigious schools, and walkable to Tirumangalam metro.',
+          price: 21000000, // ₹2.10 Cr
+          pricePerSqFt: 8750,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 2400,
+          dimensions: '40 ft × 60 ft (2,400 sq.ft)',
+          facing: 'North Facing (100% Vasthu)',
+          approval: 'CMDA Approved & Registered',
+          waterTable: 'Sweet Potable Drinking Water at 24 ft',
+          address: 'Plot #04, 6th Avenue, Anna Nagar West Extension, Chennai - 600101',
+          locality: 'Anna Nagar, Chennai',
+          latitude: 13.085000,
+          longitude: 80.210000,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA Approved & Clear Title',
+            '40 Feet Wide Blacktop Road',
+            'Walkable to Metro Station',
+            'High-Net-Worth Residential Enclave',
+          ],
+          nearbyLandmarks: [
+            'Tirumangalam Metro (1.1 km)',
+            'VR Chennai Mall (1.8 km)',
+            'Anna Nagar Tower Park (2.4 km)',
+          ],
+          isFeatured: true,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 2)),
+        ),
+
+        // 12. Medavakkam - Pearl County Plot #18 (Available)
+        PropertyModel(
+          id: 'PL-MED-18',
+          plotNumber: 'Plot #18',
+          projectName: 'Medavakkam Pearl County',
+          title: 'Plot #18 - Medavakkam Pearl County',
+          description:
+              'Fast appreciating residential layout near Medavakkam Junction connecting Velachery and Tambaram. High groundwater table, blacktop roads, and RERA approval.',
+          price: 6400000, // ₹64 Lakhs
+          pricePerSqFt: 5333,
+          type: PropertyType.plot,
+          bedrooms: 0,
+          bathrooms: 0,
+          areaSqFt: 1200,
+          dimensions: '30 ft × 40 ft (1,200 sq.ft)',
+          facing: 'East Facing',
+          approval: 'CMDA Approved & RERA Registered',
+          waterTable: 'Sweet Potable Water at 18 ft',
+          address: 'Plot #18, Medavakkam Main Road, Near Junction, Chennai - 600100',
+          locality: 'Medavakkam, Chennai',
+          latitude: 12.918000,
+          longitude: 80.192000,
+          availability: 'available',
+          images: [
+            'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
+            'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+          ],
+          amenities: [
+            'CMDA & RERA Approved',
+            '30 Feet Tar Road with Streetlights',
+            'Immediate House Construction Ready',
+            'Pre-Approved Bank Loans Available',
+          ],
+          nearbyLandmarks: [
+            'Medavakkam Junction (700 m)',
+            'Global Hospital (2.5 km)',
+            'Velachery Bypass (5.0 km)',
+          ],
+          isFeatured: false,
+          isAvailable: true,
+          createdAt: DateTime.now().subtract(const Duration(days: 4)),
+        ),
+      ];
+}

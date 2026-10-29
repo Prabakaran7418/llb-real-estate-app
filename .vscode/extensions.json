@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dart-code.flutter",
+    "dart-code.dart-code",
+    "nash.awesome-flutter-snippets",
+    "robert-brunhage.flutter-riverpod-snippets",
+    "pkief.material-icon-theme"
+  ]
+}

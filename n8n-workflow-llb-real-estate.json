@@ -1,0 +1,136 @@
+{
+  "name": "LLB Real Estate - Plot Enquiry Automation & Customer Confirmation",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "llb-chennai-events",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node-webhook-llb",
+      "name": "Enquiry Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        180,
+        300
+      ],
+      "webhookId": "llb-chennai-events"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body || $input.first().json || {};\nconst customer = body.customer || {};\nconst property = body.property || {};\n\nif (!customer.name || !customer.email || !customer.phone) {\n  throw new Error('Customer name, email, and phone are required.');\n}\n\nif (!property.id || !property.title) {\n  throw new Error('Selected plot ID and title are required.');\n}\n\nconst plotId = property.plotNumber || property.id;\nconst plotLoc = property.locality || property.areaName || 'Chennai';\nconst mapsUrl = property.googleMapsUrl || `https://www.google.com/maps/dir/?api=1&destination=${property.latitude},${property.longitude}&travelmode=driving`;\nconst timeStr = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });\n\nconst adminSubject = `New Plot Enquiry – [${plotId}] – [${plotLoc}]`;\nconst customerSubject = `[LLB Real Estate] Enquiry Confirmation: ${property.title} (${plotId})`;\n\nconst adminHtml = `\n<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <style>\n    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f4f5; margin: 0; padding: 20px; color: #000; }\n    .box { max-width: 600px; margin: 0 auto; background: #fff; border: 1.5px solid #000; border-radius: 8px; padding: 24px; }\n    .title { font-size: 18px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }\n    .row { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }\n    .lbl { color: #71717a; width: 35%; display: inline-block; font-weight: 500; }\n    .val { color: #000; font-weight: 700; }\n  </style>\n</head>\n<body>\n  <div class=\"box\">\n    <div class=\"title\">🚨 NEW PLOT ENQUIRY: ${plotId}</div>\n    <div class=\"row\"><span class=\"lbl\">Customer Name:</span> <span class=\"val\">${customer.name}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Customer Email:</span> <span class=\"val\">${customer.email}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Customer Phone:</span> <span class=\"val\">${customer.phone}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Plot ID & Title:</span> <span class=\"val\">[${plotId}] ${property.title}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Plot Location:</span> <span class=\"val\">${property.address || plotLoc}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Plot Price & Area:</span> <span class=\"val\">${property.price} (${property.areaSqFt ? property.areaSqFt + ' Sq.Ft' : ''})</span></div>\n    <div class=\"row\"><span class=\"lbl\">Google Maps Link:</span> <span class=\"val\"><a href=\"${mapsUrl}\">Open Google Maps Navigation</a></span></div>\n    <div class=\"row\"><span class=\"lbl\">Enquiry Message:</span> <span class=\"val\">${customer.message || 'Plot prospectus requested'}</span></div>\n    <div class=\"row\"><span class=\"lbl\">Date & Time:</span> <span class=\"val\">${timeStr} IST</span></div>\n  </div>\n</body>\n</html>\n`;\n\nconst customerHtml = `\n<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <style>\n    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; margin: 0; padding: 24px; color: #000; }\n    .box { max-width: 600px; margin: 0 auto; border: 1px solid #e4e4e7; border-radius: 8px; padding: 24px; }\n    .hdr { font-size: 18px; font-weight: 900; margin-bottom: 12px; }\n    .text { font-size: 13.5px; line-height: 1.6; color: #52525b; margin-bottom: 18px; }\n  </style>\n</head>\n<body>\n  <div class=\"box\">\n    <div class=\"hdr\">LLB REAL ESTATE — ENQUIRY CONFIRMATION</div>\n    <p class=\"text\">Vanakkam ${customer.name},</p>\n    <p class=\"text\">Thank you for your enquiry regarding <strong>${property.title} (${plotId})</strong> in ${plotLoc}. We have received your submission and our assigned senior property advisor will reach out to you within 30 minutes.</p>\n    <p class=\"text\"><strong>Next Steps:</strong> Live site visits are scheduled with complimentary AC Cab pickup upon confirmation.</p>\n  </div>\n</body>\n</html>\n`;\n\nreturn [{\n  json: {\n    adminEmail: 'prabakaransethu7@gmail.com',\n    customerEmail: customer.email,\n    adminSubject: adminSubject,\n    adminHtml: adminHtml,\n    customerSubject: customerSubject,\n    customerHtml: customerHtml,\n    plotId: plotId,\n    customerName: customer.name\n  }\n}];"
+      },
+      "id": "node-prepare-emails",
+      "name": "Prepare Email Payloads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        420,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.adminEmail }}",
+        "subject": "={{ $json.adminSubject }}",
+        "emailType": "html",
+        "message": "={{ $json.adminHtml }}",
+        "options": {}
+      },
+      "id": "node-send-admin",
+      "name": "Send Email to prabakaransethu7@gmail.com",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        680,
+        200
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "llb-gmail-cred",
+          "name": "LLB Real Estate Gmail"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.customerEmail }}",
+        "subject": "={{ $json.customerSubject }}",
+        "emailType": "html",
+        "message": "={{ $json.customerHtml }}",
+        "options": {}
+      },
+      "id": "node-send-customer",
+      "name": "Send Confirmation to Customer",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        680,
+        400
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "llb-gmail-cred",
+          "name": "LLB Real Estate Gmail"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"message\": \"Enquiry successfully processed and notification delivered to prabakaransethu7@gmail.com\",\n  \"plotId\": \"{{ $('Prepare Email Payloads').item.json.plotId }}\",\n  \"customer\": \"{{ $('Prepare Email Payloads').item.json.customerName }}\"\n}",
+        "options": {}
+      },
+      "id": "node-respond-app",
+      "name": "Respond to Application",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        920,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Enquiry Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Email Payloads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Email Payloads": {
+      "main": [
+        [
+          {
+            "node": "Send Email to prabakaransethu7@gmail.com",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Confirmation to Customer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email to prabakaransethu7@gmail.com": {
+      "main": [
+        [
+          {
+            "node": "Respond to Application",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
